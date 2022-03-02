@@ -1,22 +1,20 @@
 <template>
   <div class="contact-section">
     <h2>Contato</h2>
-    <div class="row">
-      <div class="col">
-        <text-field label="Seu Nome" v-model="fullName" :id="hash()" />
-      </div>
-      <div class="col">
-        <text-field label="Seu E-mail" v-model="email" :id="hash()" />
-      </div>
-      <div class="col">
-        <text-field label="Assunto" v-model="subject" :id="hash()" />
-      </div>
-      <div class="col">
-        <text-area-field label="Sua Mensagem" v-model="message" />
-      </div>
-      <div class="col">
-        <glass-button label="Enviar" />
-      </div>
+    <div class="col">
+      <text-field label="Seu Nome" v-model="fullName" :id="hash()" />
+    </div>
+    <div class="col">
+      <text-field label="Seu E-mail" v-model="email" :id="hash()" />
+    </div>
+    <div class="col">
+      <text-field label="Assunto" v-model="subject" :id="hash()" />
+    </div>
+    <div class="col">
+      <text-area-field label="Sua Mensagem" v-model="message" />
+    </div>
+    <div class="submit">
+      <glass-button label="Enviar" />
     </div>
   </div>
 </template>
@@ -47,5 +45,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.contact-section {
+  .text-field {
+    margin-bottom: 16px;
+  }
+
+  .submit {
+    margin-top: 32px;
+    text-align: right;
+  }
+}
 </style>

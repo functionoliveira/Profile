@@ -1,12 +1,16 @@
 <template>
   <div class="background-video">
-    <button class="background-video__audio" @click="handleBtnAudioClick">Ouvir</button>
+    <div  class="background-video__audio">
+      <audio-button @click="handleBtnAudioClick" :muted="muted" />
+    </div>
     <video :src="srcVideo" loop autoplay :muted="muted"></video>
   </div>
 </template>
 
 <script>
+import AudioButton from '~/components/buttons/AudioButton'
 export default {
+  components: { AudioButton },
   props: {
     srcVideo: String
   },
@@ -30,7 +34,7 @@ export default {
   left: 0;
   right: 0;
   position: fixed;
-  z-index: -1;
+  z-index: 0;
 
   video {
     width: 100%;
@@ -40,8 +44,8 @@ export default {
 
   &__audio {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    bottom: 36px;
+    left: 36px;
     z-index: 999;
   }
 }

@@ -25,6 +25,7 @@ export default {
   color: rgba(0, 0, 0, 0);
   transition: color .3s ease;
   scroll-behavior: smooth;
+  scroll-padding: 12px;
 
   &::-webkit-scrollbar-thumb {
     border-radius: 5px;

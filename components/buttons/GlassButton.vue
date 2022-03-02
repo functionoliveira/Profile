@@ -20,20 +20,22 @@ export default {
   letter-spacing: 2px;
   outline: none;
   cursor: pointer;
-  border: 2px solid white;
-  background: transparent;
-  transition: 0.2s all ease-in-out;
+  border-radius: 2px;
+  background: linear-gradient(230deg, rgba(35, 30, 210, 0.4) 0%, rgba(240, 20, 165, 0.4) 100%);
+  backdrop-filter: blur(30px);
+  border-color: transparent;
+  box-shadow: 0 0 10px 0 rgba(#fff, 0.6);
 
   label { cursor: pointer; }
 
   &:hover {
-    background: linear-gradient(230deg, rgba(35, 30, 210, 0.4) 0%, rgba(240, 20, 165, 0.4) 100%);
-    backdrop-filter: blur(30px);
-    border-color: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: 0 0 0 0 rgba(#fff, 0.6);
+    border: 2px solid white;
   }
 
   &:active {
-    border-color: white;
+    background: transparent;
   }
 }
 </style>

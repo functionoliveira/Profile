@@ -1,7 +1,7 @@
 <template>
-  <div class="text-field" v-bind:class="{ active: active }">
+  <div class="text-field" v-bind:class="{ active: active || text }">
     <label :for="id">{{ label }}</label>
-    <textarea :id="id" rows="5" :name="label" type="text" v-model="value" @focusin="() => active=true" @focusout="() => active=false"></textarea>
+    <textarea :id="id" rows="15" :name="label" type="text" v-model="value" @focusin="() => active=true" @focusout="() => active=false"></textarea>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
   border-radius: 2px;
   margin: 6px 0;
   border-bottom: 2px solid white;
-  transition: 0.4s all ease-in-out;
+  transition: 0.10s all ease-in-out;
   cursor: text;
 
   label {
@@ -56,6 +56,7 @@ export default {
     border: none;
     outline: none;
     color: white;
+    resize: vertical;
   }
 
   &.active {

@@ -4,77 +4,19 @@
     <!-- Profile -->
     <div class="profile">
       <glass-card>
-        <avatar :image="imgProfile" description="Foto de perfil: Dev Rafael Oliveira." />
-        <h3>Rafael Pereira Oliveira</h3>
-        <h4>Desenvolvedor Fullstack</h4>
+        <profile-section />
       </glass-card>
     </div>
     
     <div class="main">
       <scroll>
         <!-- Introduction -->
-        <glass-card class="mb-3" id="home">
-          <h2 class="title">Hello, Night City!</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-          <separator />
-          <div class="row">
-            <div class="col">
-              <span class="subtitle">Informações Pessoais</span>
-              <div>
-                <span>Nome</span>
-                <span>Rafael Pereira Oliveira</span>
-              </div>
-              <div>
-                <span>Idade</span>
-                <span>23 Anos</span>
-              </div>
-              <div>
-                <span>Endereço</span>
-                <span>Rio Grande do Sul, Viamão</span>
-              </div>
-              <div>
-                <span>E-mail</span>
-                <span>dev.rafael.oliveira@gmail.com</span>
-              </div>
-            </div>
-            <div class="col">
-              <span class="subtitle">Idiomas</span>
-              <score-balls :score="9" title="português" label="fluente" />
-              <score-balls :score="6" title="ingles" label="intermediário" />
-            </div>
-          </div>
-          <separator />
-          <div class="row">
-            <div class="col">
-              <span class="subtitle">Habilidades Profissionais</span>
-              <bar-score :score="95" title="Javascrip" legend="mestre">
-                <js-icon />
-              </bar-score>
-              <bar-score :score="95" title="NodeJS" legend="mestre">
-                <node-icon />
-              </bar-score>
-              <bar-score :score="95" title="Django" legend="mestre">
-                <dj-icon />
-              </bar-score>
-              <bar-score :score="95" title="HTML5" legend="mestre">
-                <html-icon />
-              </bar-score>
-              <bar-score :score="95" title="Sass" legend="mestre">
-                <sass-icon />
-              </bar-score>
-              <bar-score :score="95" title="SQL" legend="mestre">
-                <db-icon />
-              </bar-score>
-            </div>
-            <div class="col">
-              <span class="subtitle">Habilidades Extras</span>
-              <checklist />
-            </div>
-          </div>
+        <glass-card class="mb-1" id="home">
+          <home-section />
         </glass-card>
 
         <!-- Work Experiences -->
-        <glass-card class="mb-3" id="experience">
+        <glass-card class="mb-1" id="experience">
           <h2>Experiência</h2>
           <timeline label="2015 - 2015" title="Teste de software" subtitle="Procergs" description="Lorem ipsum" />
           <separator />
@@ -84,14 +26,9 @@
 
         <!-- References -->
         <glass-card class="mb-1" id="reference">
-          <h2>Referências</h2>
+          <references-section />
           <separator />
-          <h2>Clientes</h2>
-        </glass-card>
-
-        <!-- Interests -->
-        <glass-card class="mb-1" id="interests">
-          <h2>Interesses</h2>
+          <interests-section />
         </glass-card>
 
         <!-- Contact -->
@@ -130,10 +67,20 @@ import NavMenu from "~/components/NavMenu";
 
 // layout
 import ContactSection from '~/layouts/ContactSection'
+import ProfileSection from '~/layouts/ProfileSection'
+import HomeSection from '~/layouts/HomeSection'
+import ReferencesSection from '~/layouts/ReferencesSection'
+import ClientsSection from '~/layouts/ClientsSection'
+import InterestsSection from '~/layouts/InterestsSection'
 
 export default {
   components: {
+    HomeSection,
+    ProfileSection,
     ContactSection,
+    ReferencesSection,
+    ClientsSection,
+    InterestsSection,
     NavMenu,
     BackgroundVideo,
     GlassCard,
@@ -195,5 +142,9 @@ p {
 
 .links {
   padding-top: 15px;
+}
+
+#contact {
+  margin-bottom: 75px;
 }
 </style>

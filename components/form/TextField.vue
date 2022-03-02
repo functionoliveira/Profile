@@ -1,5 +1,5 @@
 <template>
-  <div class="text-field" v-bind:class="{ active: active }">
+  <div class="text-field" v-bind:class="{ active: active || text }">
     <label :for="id">{{ label }}</label>
     <input :id="id" :name="label" type="text" v-model="value" @focusin="() => active=true" @focusout="() => active=false">
   </div>
@@ -41,7 +41,7 @@ export default {
   border-radius: 2px;
   margin: 6px 0;
   border-bottom: 2px solid white;
-  transition: 0.4s all ease-in-out;
+  transition: 0.10s all ease-in-out;
   cursor: text;
 
   label {
