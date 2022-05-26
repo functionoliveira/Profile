@@ -12,7 +12,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
-    "swiper": "^6.4.15"
+    "swiper": "^8.1.6"
   },
   "devDependencies": {
     "fibers": "^5.0.0",
